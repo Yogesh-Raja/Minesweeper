@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+.topnav {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a,
+    .topnav-right {
+        float: none;
+        display: block;
+    }
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+
+.container {
+    width: 500px;
+    align-content: center;
+}
+
+#container {
+    width: 1000px;
+    height: 550px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bgImg.jpg);
+    margin: 20px auto;
+}
+
+#result_container {
+    width: 500px;
+    align-content: center;
+    position: relative;
+}
+
+#board {
+    width: 450px;
+    height: 450px;
+    background-color: #eaedef;
+    margin: 0 auto;
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grid {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dcd6bc;
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 10px solid #dcd6bc;
+    margin-bottom: 10px;
+}
+
+div {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.valid {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    margin-left: 0.9px;
+    border-color: #dcd6bc;
+    box-sizing: border-box;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+    align-content: center;
+}
+
+.bomb {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: #dcd6bc;
+    box-sizing: border-box;
+}
+
+.checked {
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    background-color: #cecab7;
+    border-color: grey;
+    box-sizing: border-box;
+}
+
+#flags_left {
+    position: static;
+    content: counter(my-awesome-counter);
+    color: #fcd000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    --size: 32px;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    transform: rotate(-10deg);
+    background: black;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 1px 1px 0 #999;
+}
+
+body {
+    background: #191919;
+    color: #eee;
+    font-family: Lato, sans-serif;
+    line-height: 1.4;
+    font-size: 90%;
+    margin: 2rem;
+}
+
+.one {
+    color: blue;
+}
+
+.two {
+    color: green;
+}
+
+.three {
+    color: orange;
+}
+
+.four {
+    color: purple;
+}
